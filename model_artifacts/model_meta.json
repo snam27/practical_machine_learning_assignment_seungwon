@@ -1,0 +1,42 @@
+{
+  "model_name": "RandomForestRegressor(tuned)",
+  "saved_at": "2026-10-12T20:18:47",
+  "selected_search_method": "Optuna",
+  "best_params": {
+    "n_estimators": 175,
+    "max_depth": 12
+  },
+  "cv_mean": 0.8212542415716282,
+  "cv_std": 0.06428073023916543,
+  "test_r2": 0.8910932915341476,
+  "baseline_config": {
+    "n_estimators": 100,
+    "max_depth": null
+  },
+  "tuned_candidate": {
+    "search_method": "Optuna",
+    "params": {
+      "n_estimators": 175,
+      "max_depth": 12
+    }
+  },
+  "tuning_cv_comparison": [
+    {
+      "model": "baseline",
+      "train_r2_mean": 0.9736781487775229,
+      "val_r2_mean": 0.8190106975986836,
+      "val_r2_std": 0.07036957021229155,
+      "train_minus_val": 0.1546674511788393
+    },
+    {
+      "model": "tuned",
+      "train_r2_mean": 0.9726922785657429,
+      "val_r2_mean": 0.8212542415716282,
+      "val_r2_std": 0.06428073023916543,
+      "train_minus_val": 0.15143803699411473
+    }
+  ],
+  "cv_mean_r2_diff_tuned_minus_baseline": 0.0022435439729445728,
+  "cv_mean_minus_test_r2": -0.06983904996251944,
+  "selection_reason": "튜닝 후 CV 평균 R²가 기준 모델보다 높아 튜닝 모델 선택"
+}
